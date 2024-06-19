@@ -1,6 +1,6 @@
 my_list = [42, 69, 0, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
 a = len(my_list)
-i = 0
+i = -1
 while i < a:
     i +=1
     if i == a:
