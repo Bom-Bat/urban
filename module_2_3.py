@@ -3,6 +3,8 @@ a = len(my_list)
 i = 0
 while i < a:
     i +=1
+    if i == a:
+        break
     if my_list[i] > 0:
         print(f'\n\tЧисло {my_list[i]} положительное')
     elif my_list[i] == 0:
