@@ -22,12 +22,15 @@ class House:
         return self.number_of_floors != other
 
     def __add__(self, value):
+        self.number_of_floors += value
         return self
 
     def __iadd__(self, value):
+        self.number_of_floors += value
         return self
 
     def __radd__(self, value):
+        self.number_of_floors += value
         return self
 
     def __str__(self):
