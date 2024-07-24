@@ -4,37 +4,53 @@ class House:
         self.number_of_floors = number_of_floors
 
     def __eq__(self, other):
+        self.test(other)
         return self.number_of_floors == other
 
     def __lt__(self, other):
+        self.test(other)
         return self.number_of_floors < other
 
     def __le__(self, other):
+        self.test(other)
         return self.number_of_floors <= other
 
     def __gt__(self, other):
+        self.test(other)
         return self.number_of_floors > other
 
     def __ge__(self, other):
+        self.test(other)
         return self.number_of_floors >= other
 
     def __ne__(self, other):
+        self.test(other)
         return self.number_of_floors != other
 
     def __add__(self, value):
+        self.test(value)
         self.number_of_floors += value
         return self
 
     def __iadd__(self, value):
+        self.test(value)
         self.number_of_floors += value
         return self
 
     def __radd__(self, value):
+        self.test(value)
         self.number_of_floors += value
         return self
 
     def __str__(self):
         return f'Название: {self.name}, кол-во этажей: {self.number_of_floors}'
+
+    def test(self, x):
+        if isinstance(x, int) or isinstance(x, House):
+            return self
+        else:
+            print(f'other не число или не принадлежит классу House')
+            exit('Конец программы')
 
 
 h1 = House('ЖК Эльбрус', 10)
