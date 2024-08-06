@@ -26,8 +26,7 @@ class Shop():
             if i.name not in pr_str:
                 file = open(self.__file_name, 'a')
                 file.write(f'{i.name}, {i.weigt}, {i.category}\n')
-                file = open(self.__file_name, 'r')
-                pr_str = file.read()
+                pr_str = pr_str + f'{i.name}, {i.weigt}, {i.category}\n'
             else:
                 print(f'Продукт {i.name} уже есть в магазине')
             file.close()
