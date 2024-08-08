@@ -9,9 +9,9 @@ class Product:
 
 
 class Shop():
-    __file_name = 'products.txt'
-    file = open(__file_name, 'a')
-    file.close()
+    def __init__(self):
+        self.__file_name = 'products.txt'
+        open(self.__file_name, 'a')
 
     def get_products(self):
         file = open(self.__file_name, 'r')
