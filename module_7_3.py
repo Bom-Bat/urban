@@ -26,6 +26,9 @@ class WordsFinder:
             for i in range(len(words)):
                 if word == words[i]:
                     find_dict[name] = words.index(word) + 1
+                    break
+                else:
+                    find_dict[name] = 'Нет такого слова!'
         return find_dict
 
     def count(self, word):
