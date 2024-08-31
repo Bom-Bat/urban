@@ -10,7 +10,9 @@ class Iterator:
         self.point = 0
         if self.step == 0:
             raise StepValueError(print('Шаг не может быть равен 0'))
-        if self.start > self.stop and self.step > 0:
+        if self.start > self.stop and self.step == 1:
+            self.step = self.start
+        elif self.start > self.stop and self.step > 0:
             self.step = -self.step
 
     def __iter__(self):
