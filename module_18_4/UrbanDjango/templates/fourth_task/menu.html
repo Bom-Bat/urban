@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Page{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+            <h1>Название страницы</h1>
+        {% endblock %}
+    </header>
+    <main>
+        {% block menu %}
+            <h2><a href="/platform4">Главная</a></h2>
+            <h3><a href="/games4">Магазин</a></h3>
+            <h3><a href="/cart4">Корзина</a></h3>
+        {% endblock %}
+    </main>
+    <main>
+        {% block content %}
+            <p> Контент </p>
+        {% endblock %}
+    </main>
+    <footer>
+        {% block back %}
+        <form action="http://127.0.0.1:8000/platform4">
+            <H2><button>Вернутся на главную</button></H2>
+        </form>
+        {% endblock %}
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
