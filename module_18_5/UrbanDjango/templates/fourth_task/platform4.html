@@ -1,0 +1,31 @@
+{% extends 'menu.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Platform{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+            <h1>Главная страница</h1>
+        {% endblock %}
+    </header>
+    <main>
+        {% block menu %}
+           {{ block.super }}
+        {% endblock %}
+    </main>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        {% block back %}
+            <form action="http://127.0.0.1:8000">
+                <H2><button>Вернутся на стартовую</button></H2>
+            </form>
+        {% endblock %}
+    </footer>
+</body>
+</html>
