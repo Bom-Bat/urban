@@ -1,1 +1,16 @@
-
+python manage.py shell
+from task1.models import Buyer
+buyer = Buyer.objects.all()
+print(buyer)
+vasya =  Buyer.objects.create(name ='Vasya', balance = 10500.50, age = 25)
+petya =  Buyer.objects.create(name ='Petya', balance = 12500.55, age = 35)
+vova =  Buyer.objects.create(name ='Vova', balance = 1500.30, age = 15)
+from task1.models import Game
+cyber = Game.objects.create(title='Cyberpunk 2077', cost=520.70, size=28.9, description='Game of the yar', age_limited=True)
+mar = Game.objects.create(title='Mario', cost=20.78, size=8.9, description='Old Game')
+hit = Game.objects.create(title='Hitman', cost=315.30, size=15.9, description='Who kills Mark?', age_limited=True)
+game = Game.objects.values()
+print(game)
+Game.objects.get(id=1).buyer.set((1, 2))
+Game.objects.get(id=2).buyer.set((1, 2, 3))
+Game.objects.get(id=3).buyer.set((2, ))
