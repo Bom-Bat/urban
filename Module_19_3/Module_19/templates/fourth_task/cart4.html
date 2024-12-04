@@ -1,0 +1,36 @@
+{% extends 'menu.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Cart{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+            <h1>Корзина</h1>
+        {% endblock %}
+    </header>
+    <main>
+        {% block menu %}
+           {{ block.super }}
+        {% endblock %}
+    </main>
+    <main>
+        {% block content %}
+            <h2>Извините ваша корзина пуста</h2>
+            <h2><s>Извините ваша корзина пуста</s></h2>
+            <h3><del>Извините ваша корзина пуста</del></h3>
+            <h3><i>Извините ваша корзина пуста</i></h3>
+            <h3><b>Извините ваша корзина пуста</b></h3>
+            <h3><small>Извините ваша корзина пуста</small></h3>
+            <h3><mark>Извините ваша корзина пуста</mark></h3>
+        {% endblock %}
+    </main>
+    <footer>
+        {% block back %}
+            {{ block.super }}
+        {% endblock %}
+    </footer>
+</body>
+</html>
