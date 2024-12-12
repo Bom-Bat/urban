@@ -1,0 +1,30 @@
+{% extends 'menu.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Platform{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+            <h1>Главная страница</h1>
+        {% endblock %}
+    </header>
+    <main>
+        {% block menu %}
+           {{ block.super }}
+            <h3><a href="django/">Регистрация</a></h3>
+        {% endblock %}
+    </main>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        {% block back %}
+
+        {% endblock %}
+    </footer>
+</body>
+</html>
